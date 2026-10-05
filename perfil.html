@@ -3,163 +3,125 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#2b1511">
-  <meta name="description" content="Prévia visual do painel de perfil do Kaffee Für Alle.">
+  <meta name="theme-color" content="#4c1f0a">
+  <meta name="description" content="Prévia visual do perfil Kaffee Für Alle. Esta página não está conectada à autenticação ou a dados pessoais.">
   <title>Meu perfil | Kaffee Für Alle</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Lora:wght@400;500;600&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="perfil.css">
   <script src="perfil.js" defer></script>
 </head>
-<body>
-  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
-  <div class="app-shell">
-    <button class="sidebar-scrim" id="sidebar-scrim" type="button" aria-label="Fechar menu" hidden></button>
-    <aside class="sidebar" id="sidebar" aria-label="Navegação do painel">
-      <a class="brand" href="#inicio" aria-label="Kaffee Für Alle — início do painel">
-        <img src="../assets/img/logo-kaffee.png" alt="Kaffee Für Alle" width="167" height="64">
-        <span class="brand-caption">PAINEL DE PERFIL</span>
+<body id="inicio">
+  <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="cabecalho" aria-label="Kaffee Für Alle">
+    <div class="cabecalho-topo">
+      <a class="logo" href="#inicio" aria-label="Kaffee Für Alle — início desta prévia">
+        <img src="logs/Kaffee%20F%C3%BCr%20Alle%20hb.png" alt="Kaffee Für Alle" width="220" height="84">
       </a>
-      <div class="sidebar-section-label">MENU</div>
-      <nav class="side-nav" id="side-nav" aria-label="Menu principal">
-        <a class="nav-link is-active" href="#inicio" data-nav="inicio"><span class="nav-icon" aria-hidden="true">⌂</span><span>Início</span></a>
-        <a class="nav-link" href="#perfil" data-nav="perfil"><span class="nav-icon" aria-hidden="true">◉</span><span>Meu perfil</span></a>
-        <a class="nav-link" href="#indicadores" data-nav="indicadores"><span class="nav-icon" aria-hidden="true">▦</span><span>Visão geral</span></a>
-        <a class="nav-link" href="#modulos" data-nav="modulos"><span class="nav-icon" aria-hidden="true">✳</span><span id="nav-modules-label">Minha conta</span></a>
-        <a class="nav-link" href="#atividade" data-nav="atividade"><span class="nav-icon" aria-hidden="true">◷</span><span>Atividade recente</span></a>
-      </nav>
-      <div class="sidebar-note">
-        <span class="note-mark" aria-hidden="true">✦</span>
-        <p>Um cantinho seu, no universo do Kaffee.</p>
+
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-controls="menu-principal" aria-expanded="false">
+        <span aria-hidden="true">☰</span>
+        <span>Menu</span>
+      </button>
+
+      <div class="icones" aria-label="Áreas da conta">
+        <span class="icone-indisponivel" aria-disabled="true" title="Favoritos não disponíveis nesta prévia">
+          <img src="logs/cora.png" alt="">
+          <span class="sr-only">Favoritos — indisponível nesta prévia</span>
+        </span>
+        <span class="icone-indisponivel" aria-disabled="true" title="Carrinho não disponível nesta prévia">
+          <img src="logs/carrinho.png" alt="">
+          <span class="sr-only">Carrinho — indisponível nesta prévia</span>
+        </span>
+        <a class="icone-atual" href="#perfil" aria-current="page" aria-label="Perfil — página atual">
+          <img src="logs/perfil.png" alt="">
+        </a>
       </div>
-      <div class="sidebar-bottom">
-        <span class="connection-dot" aria-hidden="true"></span>
-        <span>Prévia visual, sem sessão</span>
+    </div>
+
+    <nav class="menu" id="menu-principal" aria-label="Navegação principal">
+      <span class="item-menu-indisponivel" aria-disabled="true" title="Rota não incluída neste repositório">INÍCIO</span>
+      <span class="item-menu-indisponivel" aria-disabled="true" title="Rota não incluída neste repositório">CARDÁPIO</span>
+      <span class="item-menu-indisponivel" aria-disabled="true" title="Rota não incluída neste repositório">SOBRE NÓS</span>
+      <span class="item-menu-indisponivel" aria-disabled="true" title="Rota não incluída neste repositório">NOTÍCIAS</span>
+      <span class="item-menu-indisponivel" aria-disabled="true" title="Rota não incluída neste repositório">MÚSICA</span>
+      <div class="BarraPesquisa" role="group" aria-label="Pesquisa indisponível nesta prévia">
+        <input class="texto" type="search" placeholder="pesquisa" aria-label="Pesquisa indisponível" disabled>
+        <button class="botao" type="button" aria-label="Pesquisa indisponível" disabled>
+          <img src="logs/icone%20de%20pesquisa.png" alt="">
+        </button>
       </div>
+    </nav>
+  </header>
+
+  <main class="conteudo-perfil" id="conteudo">
+    <section class="introducao" aria-labelledby="titulo-pagina">
+      <p class="sobretitulo">KAFFEE FÜR ALLE <span aria-hidden="true">·</span> SUA CONTA</p>
+      <h1 id="titulo-pagina">Meu perfil</h1>
+      <p class="introducao-texto">Um espaço tranquilo para acompanhar sua experiência na casa.</p>
+    </section>
+
+    <aside class="aviso-previa" role="status" aria-label="Limitação desta prévia">
+      <span class="aviso-simbolo" aria-hidden="true">i</span>
+      <p><strong>Prévia visual, sem conta conectada.</strong> Este repositório não inclui autenticação, sessão nem dados reais; por isso, nenhum dado pessoal ou nível de acesso é exibido ou salvo.</p>
     </aside>
 
-    <div class="page-column" id="inicio">
-      <header class="topbar">
-        <button class="icon-button menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menu" aria-controls="sidebar" aria-expanded="false">
-          <span aria-hidden="true">☰</span>
-        </button>
-        <div class="breadcrumb"><span class="breadcrumb-home">Kaffee</span><span aria-hidden="true">/</span><span>Meu perfil</span></div>
-        <label class="search-box" for="painel-busca">
-          <span class="search-icon" aria-hidden="true">⌕</span>
-          <input id="painel-busca" type="search" placeholder="Buscar neste painel..." autocomplete="off">
-          <kbd>/</kbd>
-        </label>
-        <div class="topbar-actions">
-          <span class="preview-pill"><span aria-hidden="true">◌</span> Prévia</span>
-          <button class="icon-button theme-toggle" id="theme-toggle" type="button" aria-label="Ativar tema claro" aria-pressed="false" title="Alternar tema"><span aria-hidden="true">☼</span></button>
-          <button class="top-avatar" type="button" data-open-profile aria-label="Abrir edição local do perfil"><span aria-hidden="true">?</span></button>
-        </div>
-      </header>
+    <section class="cartao-perfil" id="perfil" aria-labelledby="titulo-perfil">
+      <div class="cartao-lateral" aria-hidden="true">
+        <span class="selo-cafe">K</span>
+        <span class="avatar-ilustrativo">☕</span>
+        <span class="legenda-avatar">KAFFEE FÜR ALLE</span>
+      </div>
 
-      <main id="conteudo" class="main-content">
-        <section class="intro-row" aria-labelledby="page-title">
+      <div class="cartao-conteudo">
+        <div class="perfil-cabecalho">
           <div>
-            <p class="eyebrow">KAFFEE FÜR ALLE <span aria-hidden="true">·</span> SEU ESPAÇO</p>
-            <h1 id="page-title">Um bom dia começa por aqui.</h1>
-            <p class="intro-copy">Seu perfil, seus atalhos e um pouco do aconchego da casa.</p>
+            <p class="rotulo-secao">SEU ESPAÇO NA CASA</p>
+            <h2 id="titulo-perfil">Perfil de usuário</h2>
           </div>
-          <span class="date-chip"><span aria-hidden="true">☕</span> Mais que café, uma experiência.</span>
-        </section>
-
-        <section class="profile-banner" id="perfil" aria-labelledby="profile-name">
-          <div class="banner-orbit banner-orbit-one" aria-hidden="true"></div>
-          <div class="banner-orbit banner-orbit-two" aria-hidden="true"></div>
-          <div class="banner-grain" aria-hidden="true">K</div>
-          <div class="profile-banner-content">
-            <div class="profile-avatar" aria-hidden="true"><span>?</span><i></i></div>
-            <div class="profile-copy">
-              <div class="profile-role-line"><span class="status-dot" aria-hidden="true"></span><span id="profile-role">Cliente · prévia local</span></div>
-              <h2 id="profile-name">Perfil não conectado</h2>
-              <p id="profile-email">Nenhuma sessão autenticada nesta prévia.</p>
-              <div class="profile-meta"><span><span aria-hidden="true">◷</span> Membro desde <strong>—</strong></span><span class="meta-divider" aria-hidden="true"></span><span id="profile-data-note">Dados reais indisponíveis</span></div>
-            </div>
-            <div class="profile-banner-actions">
-              <label class="preview-select-label" for="profile-type">Visualizar interface</label>
-              <select id="profile-type" aria-label="Selecionar tipo de painel para prévia">
-                <option value="cliente" selected>Cliente</option>
-                <option value="gestor">Gestor</option>
-                <option value="admin">Administrador</option>
-              </select>
-              <button class="button button-light" type="button" data-open-profile><span aria-hidden="true">✎</span> Editar perfil</button>
-            </div>
-          </div>
-          <div class="banner-footnote"><span aria-hidden="true">ⓘ</span> Visual demonstrativo: não conectado à autenticação ou ao banco de dados.</div>
-        </section>
-
-        <section class="metrics-section" id="indicadores" aria-labelledby="metrics-title">
-          <div class="section-heading">
-            <div><p class="eyebrow">UM OLHAR RÁPIDO</p><h2 id="metrics-title">Seu resumo</h2></div>
-            <span class="section-aside">Indicadores sem dados conectados</span>
-          </div>
-          <div class="metrics-grid" id="metrics-grid" aria-live="polite"></div>
-        </section>
-
-        <div class="content-grid">
-          <section class="panel account-panel" id="conta" aria-labelledby="account-title">
-            <div class="panel-heading">
-              <div class="panel-icon" aria-hidden="true">◉</div>
-              <div><p class="eyebrow">SEU ESPAÇO PESSOAL</p><h2 id="account-title">Minha conta</h2></div>
-              <span class="panel-kicker">01</span>
-            </div>
-            <div class="account-list">
-              <div class="account-row"><span class="account-symbol" aria-hidden="true">⌑</span><div><strong>Dados pessoais</strong><small>Informações não conectadas</small></div><span class="row-arrow" aria-hidden="true">›</span></div>
-              <div class="account-row"><span class="account-symbol" aria-hidden="true">◇</span><div><strong>Segurança</strong><small>Disponível com a integração de conta</small></div><span class="row-arrow" aria-hidden="true">›</span></div>
-              <div class="account-row"><span class="account-symbol" aria-hidden="true">☷</span><div><strong>Preferências</strong><small>O tema desta prévia é salvo neste navegador</small></div><span class="row-arrow" aria-hidden="true">›</span></div>
-            </div>
-            <button class="button button-outline account-edit" type="button" data-open-profile>Editar dados nesta prévia <span aria-hidden="true">↗</span></button>
-          </section>
-
-          <section class="panel activity-panel" id="atividade" aria-labelledby="activity-title">
-            <div class="panel-heading">
-              <div class="panel-icon" aria-hidden="true">◷</div>
-              <div><p class="eyebrow">POR ENQUANTO</p><h2 id="activity-title">Atividade recente</h2></div>
-              <span class="panel-kicker">02</span>
-            </div>
-            <div class="empty-activity">
-              <span class="empty-cup" aria-hidden="true">☕</span>
-              <strong>Nenhuma atividade disponível.</strong>
-              <p>Esta página ainda não está ligada às atividades da sua conta.</p>
-            </div>
-          </section>
+          <span class="estado-previa">SEM AUTENTICAÇÃO</span>
         </div>
 
-        <section class="modules-section" id="modulos" aria-labelledby="modules-title">
-          <div class="section-heading">
-            <div><p class="eyebrow" id="modules-eyebrow">ACESSO PESSOAL</p><h2 id="modules-title">Para você</h2></div>
-            <span class="section-aside" id="modules-description">Atalhos ilustrativos — rotas ainda não conectadas</span>
-          </div>
-          <div class="module-grid" id="module-grid" aria-live="polite"></div>
-        </section>
+        <p class="texto-perfil">Os dados da conta aparecerão aqui quando esta página estiver conectada ao sistema Kaffee. Nesta prévia, os campos permanecem vazios de propósito.</p>
 
-        <section class="quick-section" aria-labelledby="quick-title">
-          <div class="section-heading">
-            <div><p class="eyebrow">UM PASSO DE CADA VEZ</p><h2 id="quick-title">Acesso rápido</h2></div>
-            <span class="section-aside">Prévia sem ações no sistema</span>
-          </div>
-          <div class="quick-grid" id="quick-grid" aria-live="polite"></div>
-        </section>
+        <dl class="dados-perfil" aria-label="Dados indisponíveis nesta prévia">
+          <div><dt>Nome</dt><dd>Não disponível</dd></div>
+          <div><dt>E-mail</dt><dd>Não disponível</dd></div>
+          <div><dt>Telefone</dt><dd>Não disponível</dd></div>
+        </dl>
 
-        <footer class="page-footer"><span>Feito com carinho para o Kaffee Für Alle</span><span>Prévia de interface · sem conexão com dados</span></footer>
-      </main>
+        <p class="nota-perfil">Permissões e áreas de acesso não são simuladas. O papel do usuário só deve ser apresentado a partir da autenticação e das regras reais do Kaffee.</p>
+      </div>
+    </section>
+
+    <section class="nota-rotas" aria-labelledby="titulo-rotas">
+      <div class="nota-rotas-marca" aria-hidden="true">☕</div>
+      <div>
+        <p class="rotulo-secao">ESTE REPOSITÓRIO</p>
+        <h2 id="titulo-rotas">Uma página de cada vez</h2>
+        <p>O projeto recebido contém somente esta página de perfil. Cardápio, favoritos, carrinho, pedidos e áreas de gestão não têm rotas aqui; por isso não aparecem como atalhos clicáveis.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-cafeteria" aria-label="Informações e contatos Kaffee Für Alle">
+    <div class="footer-cafeteria__conteudo">
+      <section class="footer-cafeteria__grupo">
+        <h2 class="footer-cafeteria__titulo">Onde nos encontrar</h2>
+        <address class="footer-cafeteria__texto footer-cafeteria__endereco">Alameda Cel. Elizio Pereira, S/N - Estradinha, Paranaguá - PR, 83206-000</address>
+      </section>
+      <section class="footer-cafeteria__grupo">
+        <h2 class="footer-cafeteria__titulo">Conheça-nos</h2>
+        <span class="footer-cafeteria__texto">Egípcios FSD</span>
+      </section>
+      <section class="footer-cafeteria__grupo">
+        <h2 class="footer-cafeteria__titulo">Ajuda</h2>
+        <a class="footer-cafeteria__link" href="mailto:egipcios.company@gmail.com">egipcios.company@gmail.com</a>
+      </section>
     </div>
-  </div>
-
-  <dialog class="profile-dialog" id="profile-dialog" aria-labelledby="dialog-title">
-    <form id="profile-form" method="dialog">
-      <div class="dialog-heading"><div><p class="eyebrow">EDIÇÃO LOCAL</p><h2 id="dialog-title">Seu perfil</h2></div><button class="icon-button dialog-close" type="button" data-close-dialog aria-label="Fechar">×</button></div>
-      <p class="dialog-notice"><span aria-hidden="true">ⓘ</span> Os campos abaixo servem apenas para visualizar a interface. Nada será enviado ou salvo no Supabase.</p>
-      <label for="edit-name">Nome completo</label><input id="edit-name" name="name" type="text" autocomplete="name" placeholder="Digite um nome para esta prévia">
-      <label for="edit-email">E-mail</label><input id="edit-email" name="email" type="email" autocomplete="email" placeholder="Digite um e-mail para esta prévia">
-      <label for="edit-phone">Telefone</label><input id="edit-phone" name="phone" type="tel" autocomplete="tel" placeholder="Opcional nesta prévia">
-      <div class="dialog-actions"><button class="button button-outline" type="button" data-close-dialog>Cancelar</button><button class="button button-primary" type="submit">Aplicar só nesta tela</button></div>
-    </form>
-  </dialog>
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <p class="footer-previa">Prévia visual: sem autenticação e sem acesso a dados de conta.</p>
+  </footer>
 </body>
 </html>

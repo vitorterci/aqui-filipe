@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#4c1f0a">
-  <meta name="description" content="Prévia visual do perfil Kaffee Für Alle. Esta página não está conectada à autenticação ou a dados pessoais.">
+  <meta name="description" content="Meu perfil Kaffee Für Alle: conta pessoal e recursos exibidos conforme o nível de acesso recebido do sistema.">
   <title>Meu perfil | Kaffee Für Alle</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,23 +17,23 @@
 
   <header class="cabecalho" aria-label="Kaffee Für Alle">
     <div class="cabecalho-topo">
-      <a class="logo" href="#inicio" aria-label="Kaffee Für Alle — início desta prévia">
+      <a class="logo" href="#inicio" aria-label="Kaffee Für Alle — início do perfil">
         <img src="logs/Kaffee%20F%C3%BCr%20Alle%20hb.png" alt="Kaffee Für Alle" width="220" height="84">
       </a>
 
-      <button class="menu-toggle" id="menu-toggle" type="button" aria-controls="menu-principal" aria-expanded="false">
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menu">
         <span aria-hidden="true">☰</span>
         <span>Menu</span>
       </button>
 
       <div class="icones" aria-label="Áreas da conta">
-        <span class="icone-indisponivel" aria-disabled="true" title="Favoritos não disponíveis nesta prévia">
+        <span class="icone-indisponivel" aria-disabled="true" title="Rota de favoritos não integrada">
           <img src="logs/cora.png" alt="">
-          <span class="sr-only">Favoritos — indisponível nesta prévia</span>
+          <span class="sr-only">Favoritos — rota não integrada</span>
         </span>
-        <span class="icone-indisponivel" aria-disabled="true" title="Carrinho não disponível nesta prévia">
+        <span class="icone-indisponivel" aria-disabled="true" title="Rota do carrinho não integrada">
           <img src="logs/carrinho.png" alt="">
-          <span class="sr-only">Carrinho — indisponível nesta prévia</span>
+          <span class="sr-only">Carrinho — rota não integrada</span>
         </span>
         <a class="icone-atual" href="#perfil" aria-current="page" aria-label="Perfil — página atual">
           <img src="logs/perfil.png" alt="">
@@ -47,9 +47,9 @@
       <span class="item-menu-indisponivel" aria-disabled="true" title="Rota não incluída neste repositório">SOBRE NÓS</span>
       <span class="item-menu-indisponivel" aria-disabled="true" title="Rota não incluída neste repositório">NOTÍCIAS</span>
       <span class="item-menu-indisponivel" aria-disabled="true" title="Rota não incluída neste repositório">MÚSICA</span>
-      <div class="BarraPesquisa" role="group" aria-label="Pesquisa indisponível nesta prévia">
-        <input class="texto" type="search" placeholder="pesquisa" aria-label="Pesquisa indisponível" disabled>
-        <button class="botao" type="button" aria-label="Pesquisa indisponível" disabled>
+      <div class="BarraPesquisa" role="group" aria-label="Pesquisa não conectada neste repositório">
+        <input class="texto" type="search" placeholder="pesquisa" aria-label="Pesquisa não conectada" disabled>
+        <button class="botao" type="button" aria-label="Pesquisa não conectada" disabled>
           <img src="logs/icone%20de%20pesquisa.png" alt="">
         </button>
       </div>
@@ -63,16 +63,16 @@
       <p class="introducao-texto">Um espaço tranquilo para acompanhar sua experiência na casa.</p>
     </section>
 
-    <aside class="aviso-previa" role="status" aria-label="Limitação desta prévia">
+    <aside class="aviso-sessao" id="aviso-sessao" role="status" aria-live="polite">
       <span class="aviso-simbolo" aria-hidden="true">i</span>
-      <p><strong>Prévia visual, sem conta conectada.</strong> Este repositório não inclui autenticação, sessão nem dados reais; por isso, nenhum dado pessoal ou nível de acesso é exibido ou salvo.</p>
+      <p id="aviso-sessao-texto"><strong>Perfil aguardando autenticação.</strong> Nenhum dado pessoal ou nível de acesso será presumido.</p>
     </aside>
 
     <section class="cartao-perfil" id="perfil" aria-labelledby="titulo-perfil">
       <div class="cartao-lateral" aria-hidden="true">
         <span class="selo-cafe">K</span>
-        <span class="avatar-ilustrativo">☕</span>
-        <span class="legenda-avatar">KAFFEE FÜR ALLE</span>
+        <span class="avatar-perfil" id="profile-initial">K</span>
+        <span class="legenda-avatar">MEU PERFIL</span>
       </div>
 
       <div class="cartao-conteudo">
@@ -81,28 +81,47 @@
             <p class="rotulo-secao">SEU ESPAÇO NA CASA</p>
             <h2 id="titulo-perfil">Perfil de usuário</h2>
           </div>
-          <span class="estado-previa">SEM AUTENTICAÇÃO</span>
+          <span class="estado-sessao" id="profile-state" aria-live="polite">SEM SESSÃO</span>
         </div>
 
-        <p class="texto-perfil">Os dados da conta aparecerão aqui quando esta página estiver conectada ao sistema Kaffee. Nesta prévia, os campos permanecem vazios de propósito.</p>
+        <p class="texto-perfil" id="profile-summary">Os dados da conta aparecerão quando o sistema fornecer um perfil autenticado.</p>
 
-        <dl class="dados-perfil" aria-label="Dados indisponíveis nesta prévia">
-          <div><dt>Nome</dt><dd>Não disponível</dd></div>
-          <div><dt>E-mail</dt><dd>Não disponível</dd></div>
-          <div><dt>Telefone</dt><dd>Não disponível</dd></div>
+        <dl class="dados-perfil" aria-label="Dados do perfil autenticado">
+          <div><dt>Nome</dt><dd id="profile-name">Não disponível</dd></div>
+          <div><dt>E-mail</dt><dd id="profile-email">Não disponível</dd></div>
+          <div><dt>Telefone</dt><dd id="profile-phone">Não disponível</dd></div>
+          <div><dt>Nível de acesso</dt><dd id="profile-role">Não disponível</dd></div>
         </dl>
 
-        <p class="nota-perfil">Permissões e áreas de acesso não são simuladas. O papel do usuário só deve ser apresentado a partir da autenticação e das regras reais do Kaffee.</p>
+        <p class="nota-perfil" id="profile-note">A interface organiza o que aparece; qualquer operação protegida deve ser autorizada no servidor com Auth, RLS e Policies.</p>
       </div>
     </section>
 
-    <section class="nota-rotas" aria-labelledby="titulo-rotas">
+    <section class="estado-vazio nota-rotas" id="role-empty" aria-labelledby="role-empty-title">
       <div class="nota-rotas-marca" aria-hidden="true">☕</div>
       <div>
-        <p class="rotulo-secao">ESTE REPOSITÓRIO</p>
-        <h2 id="titulo-rotas">Uma página de cada vez</h2>
-        <p>O projeto recebido contém somente esta página de perfil. Cardápio, favoritos, carrinho, pedidos e áreas de gestão não têm rotas aqui; por isso não aparecem como atalhos clicáveis.</p>
+        <p class="rotulo-secao">SEU PERFIL</p>
+        <h2 id="role-empty-title">Aguardando seu perfil</h2>
+        <p id="role-empty-copy">Esta versão do repositório não inclui autenticação. Quando uma sessão fornecer <code>tipo_usuario</code>, as áreas correspondentes serão exibidas.</p>
       </div>
+    </section>
+
+    <section class="secao-hub" id="metrics-section" aria-labelledby="metrics-title" hidden>
+      <div class="hub-heading">
+        <div><p class="rotulo-secao">UM OLHAR RÁPIDO</p><h2 id="metrics-title">Seu resumo</h2></div>
+        <span class="hub-aside">Valores aguardando conexão aos dados</span>
+      </div>
+      <div class="grade-metricas" id="metrics-grid"></div>
+    </section>
+
+    <div class="role-sections" id="role-sections" hidden></div>
+
+    <section class="secao-hub acesso-rapido" id="quick-section" aria-labelledby="quick-title" hidden>
+      <div class="hub-heading">
+        <div><p class="rotulo-secao">NAVEGAÇÃO DO PERFIL</p><h2 id="quick-title">Acesso rápido</h2></div>
+        <span class="hub-aside">Atalhos para as seções desta página</span>
+      </div>
+      <div class="grade-atalhos" id="quick-grid"></div>
     </section>
   </main>
 
@@ -121,7 +140,7 @@
         <a class="footer-cafeteria__link" href="mailto:egipcios.company@gmail.com">egipcios.company@gmail.com</a>
       </section>
     </div>
-    <p class="footer-previa">Prévia visual: sem autenticação e sem acesso a dados de conta.</p>
+    <p class="footer-nota">A filtragem visual do perfil não substitui a autorização real no servidor.</p>
   </footer>
 </body>
 </html>
